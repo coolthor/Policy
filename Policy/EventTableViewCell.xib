@@ -79,12 +79,13 @@
                             <action selector="AddEventToCalendar:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NmQ-gm-ex2"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6e-XF-xJZ">
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6e-XF-xJZ">
                         <rect key="frame" x="278" y="64" width="22" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal">
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
+                        <state key="normal" image="Editing-Delete-icon.png"/>
+                        <connections>
+                            <action selector="DeleteEventFromCalendar:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MRz-Ur-Hx0"/>
+                        </connections>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ifl-0V-Q7g">
                         <rect key="frame" x="10" y="10" width="40" height="40"/>
@@ -92,9 +93,10 @@
                     </imageView>
                 </subviews>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.93333339691162109" green="0.87843143939971924" blue="0.69019609689712524" alpha="1" colorSpace="deviceRGB"/>
+            <color key="backgroundColor" red="0.96862751245498657" green="0.97254908084869385" blue="0.89411771297454834" alpha="1" colorSpace="deviceRGB"/>
             <connections>
                 <outlet property="AddEvent" destination="nDi-6h-oH0" id="uLd-NA-W5i"/>
+                <outlet property="DeleteEvent" destination="H6e-XF-xJZ" id="Xoz-Kk-qHm"/>
                 <outlet property="End" destination="UZj-Ul-b4r" id="B01-dS-rV7"/>
                 <outlet property="QuestIcon" destination="Ifl-0V-Q7g" id="wBB-0K-d1I"/>
                 <outlet property="start" destination="Hi6-XC-LGS" id="3gx-ee-MoJ"/>
@@ -102,4 +104,7 @@
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Editing-Delete-icon.png" width="32" height="32"/>
+    </resources>
 </document>

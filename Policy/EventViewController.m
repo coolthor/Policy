@@ -33,8 +33,6 @@
 
 }
 
-
-
 -(void)ParseJSON{
     
     _Events = [[NSMutableArray alloc]init];
@@ -82,6 +80,7 @@
     return _Events.count;
 }
 
+
 -(NSString *)ParseDatetime:(NSString *)rawDateTime{
     NSString * str;
     if([rawDateTime rangeOfString:@"undefined"].location == NSNotFound){
@@ -113,9 +112,11 @@
     if([self checkEventStart:cell.start.text End:cell.End.text Title:cell.title.text]){
         cell.QuestIcon.image = [UIImage imageNamed:@"messagebox_warning"];
         cell.AddEvent.enabled = NO;
+        cell.DeleteEvent.enabled = YES;
     }else{
         cell.QuestIcon.image = [UIImage imageNamed:@"messagebox_warning_Yellow"];
         cell.AddEvent.enabled = YES;
+        cell.DeleteEvent.enabled = NO;
     }
     return  cell;
 }
@@ -123,16 +124,6 @@
 -(CGFloat )tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 -(void)EventTableViewCellDelegateDidClickAddEventButton:(EventTableViewCell *)viewController{
     _selectedCell =viewController;
@@ -140,27 +131,36 @@
     
     [alert show];
 }
-
--(void)updateUITableViewCell{
-    [_myTableView beginUpdates];
+-(void)EventTableViewCellDelegateDidClickDelEventButton:(EventTableViewCell *)viewController{
+    _selectedCell =viewController;
+    UIAlertView  *alert = [[UIAlertView alloc]initWithTitle:@"刪除事件" message:@"確認從行事曆中刪除該事件" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"刪除", nil];
     
-    NSIndexPath *_indexPath = [_myTableView indexPathForCell:_selectedCell];//[[NSIndexPath alloc] initWithIndexes:_path length:2];
-    NSLog(@"update section: %ld Row: %ld",(long)_indexPath.section,(long)_indexPath.row);
-    NSArray *_indexPaths = [[NSArray alloc] initWithObjects:_indexPath, nil];
-    [_myTableView reloadRowsAtIndexPaths:_indexPaths withRowAnimation:UITableViewRowAnimationRight];
-    [_myTableView endUpdates];
-    
+    [alert show];
 }
 
+
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    switch (buttonIndex) {
-        case 0:
-            break;
-        case 1:
-            [self addEventToCalender];
-            break;
-        default:
-            break;
+    if([alertView.title isEqualToString:@"刪除事件"]){
+        switch (buttonIndex) {
+            case 0:
+                break;
+            case 1:
+                [self delEventFromCalendar];
+                break;
+            default:
+                break;
+        }
+        
+    }else{
+        switch (buttonIndex) {
+            case 0:
+                break;
+            case 1:
+                [self addEventToCalender];
+                break;
+            default:
+                break;
+        }
     }
 }
 
@@ -198,13 +198,8 @@
     
     NSPredicate *predicate = [_eventStore predicateForEventsWithStartDate:oneDayAgo endDate:EDate calendars:nil];
     NSArray * events = [_eventStore eventsMatchingPredicate:predicate];
-//    for(EKEvent * e in events){
-//        NSLog(@"Remove Event:%@",e);
-//        [_eventStore removeEvent:e span:EKSpanFutureEvents error:nil];
-//    }
+
     for (EKEvent * o in events) {
-        NSLog(@"Title      : %@",title);
-        NSLog(@"event title: %@",o.title);
         if([o.title rangeOfString:title].location != NSNotFound){
             isEvented =YES;
             break;
@@ -212,6 +207,58 @@
     }
     
     return isEvented;
+}
+
+
+-(void)delEventFromCalendar{
+    NSString * startDate = _selectedCell.start.text;
+    NSString * endDate = _selectedCell.End.text;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *oneDayAgoComponents = [[NSDateComponents alloc] init];
+    oneDayAgoComponents.day = -1;
+    
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *SDate = [dateFormatter dateFromString:startDate];
+    NSDate *oneDayAgo = [calendar dateByAddingComponents:oneDayAgoComponents
+                                                  toDate:SDate
+                                                 options:0];
+    
+    //增加前後各一天的Range，避免找不到event
+    NSDateComponents *oneDayLeftComponents = [[NSDateComponents alloc] init];
+    oneDayLeftComponents.day = 1;
+    
+    
+    NSDate *EDate;
+    if(![endDate isEqualToString:@"未定"]){
+        
+        EDate = [dateFormatter dateFromString:endDate];
+        EDate = [calendar dateByAddingComponents:oneDayLeftComponents
+                                          toDate:EDate
+                                         options:0];
+    }else{
+        EDate = [calendar dateByAddingComponents:oneDayLeftComponents
+                                          toDate:SDate
+                                         options:0];
+    }
+    
+    NSPredicate *predicate = [_eventStore predicateForEventsWithStartDate:oneDayAgo endDate:EDate calendars:nil];
+    NSArray * events = [_eventStore eventsMatchingPredicate:predicate];
+    NSError * error;
+    for(EKEvent * e in events){
+//        NSLog(@"Remove Event:%@",e);
+        [_eventStore removeEvent:e span:EKSpanFutureEvents error:&error];
+    }
+    
+    if (!error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+        _selectedCell.QuestIcon.image = [UIImage imageNamed:@"messagebox_warning_Yellow"];
+        _selectedCell.AddEvent.enabled = YES;
+        _selectedCell.DeleteEvent.enabled = NO;
+    });
+    }
+
 }
 
 -(void)addEventToCalender{
@@ -239,20 +286,32 @@
              event.endDate=EDate;
              event.notes = _selectedCell.title.text;
              event.allDay=YES;
+             //一天前提醒
+             EKAlarm * alarm = [EKAlarm alarmWithRelativeOffset:-(60*60*24)];
+             event.alarms = [NSArray arrayWithObject:alarm];
              
-             NSLog(@"Add EVnet: %@",event);
+//             NSLog(@"Add EVnet: %@",event);
              [event setCalendar:[_eventStore defaultCalendarForNewEvents]];
              
              NSError *err;
              [_eventStore saveEvent:event span:EKSpanThisEvent error:&err];
-             _selectedCell.QuestIcon.image = [UIImage imageNamed:@"messagebox_warning"];
-
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 _selectedCell.QuestIcon.image = [UIImage imageNamed:@"messagebox_warning"];
+                 _selectedCell.AddEvent.enabled = NO;
+                 _selectedCell.DeleteEvent.enabled = YES;
+             });
          }
          else
          {
-             NSLog(@"NoPermission to access the calendar");
+             [_eventStore requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error){}];
+//             NSLog(@"NoPermission to access the calendar");
          }
          
      }];
 }
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return @"公民任務清單";
+}
+
 @end

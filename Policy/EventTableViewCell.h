@@ -13,17 +13,24 @@
 
 @protocol EventTableViewCellDelegate<NSObject>
 -(void)EventTableViewCellDelegateDidClickAddEventButton:(EventTableViewCell *)viewController;
+
+-(void)EventTableViewCellDelegateDidClickDelEventButton:(EventTableViewCell *)viewController;
 @end
 
 @interface EventTableViewCell : UITableViewCell
 
 @property (nonatomic,weak) id<EventTableViewCellDelegate> delegate;
 
+@property (strong, nonatomic) IBOutlet UIButton *DeleteEvent;
+
 @property (strong, nonatomic) IBOutlet UIButton *AddEvent;
 @property (strong, nonatomic) IBOutlet UILabel *title;
 @property (strong, nonatomic) IBOutlet UILabel *start;
 @property (strong, nonatomic) IBOutlet UILabel *End;
 - (IBAction)AddEventToCalendar:(id)sender;
+- (IBAction)DeleteEventFromCalendar:(id)sender;
+
+
 @property (strong, nonatomic) IBOutlet UIImageView *QuestIcon;
 @property Event * event;
 @end

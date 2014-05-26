@@ -47,6 +47,8 @@
 		33AAEC22192F1A08003558F5 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33AAEC21192F1A08003558F5 /* EventKit.framework */; };
 		33BC797019281AF30047C679 /* StreamView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33BC796F19281AF30047C679 /* StreamView.m */; };
 		33DC19AD192AA93B00E81A3A /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DC19AC192AA93B00E81A3A /* News.m */; };
+		33E0D40D19332D5A00EBE843 /* 111-user.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E0D40C19332D5A00EBE843 /* 111-user.png */; };
+		33E0D40F19335BD200EBE843 /* Editing-Delete-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E0D40E19335BD200EBE843 /* Editing-Delete-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,8 @@
 		33BC796F19281AF30047C679 /* StreamView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamView.m; sourceTree = "<group>"; };
 		33DC19AB192AA93B00E81A3A /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
 		33DC19AC192AA93B00E81A3A /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		33E0D40C19332D5A00EBE843 /* 111-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "111-user.png"; path = "../../../Downloads/glyphish-icons/PNG icons/111-user.png"; sourceTree = "<group>"; };
+		33E0D40E19335BD200EBE843 /* Editing-Delete-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Editing-Delete-icon.png"; path = "../../../Downloads/Editing-Delete-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +286,8 @@
 		33AAEC11192EDC96003558F5 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				33E0D40E19335BD200EBE843 /* Editing-Delete-icon.png */,
+				33E0D40C19332D5A00EBE843 /* 111-user.png */,
 				33AAEC1D192F17BC003558F5 /* messagebox_warning_Yellow.png */,
 				33AAEC1E192F17BC003558F5 /* messagebox_warning.png */,
 				33AAEC1B192EEDA9003558F5 /* background.png */,
@@ -392,9 +398,11 @@
 				33A1D10F192E628B004A7B2A /* 108-badge.png in Resources */,
 				3378366419281894007990A6 /* InfoPlist.strings in Resources */,
 				3324DD96192B8A6C00BC1C4B /* NewsDetailViewController.xib in Resources */,
+				33E0D40F19335BD200EBE843 /* Editing-Delete-icon.png in Resources */,
 				3324DDA5192BAD1A00BC1C4B /* NewDetailTableViewCell.xib in Resources */,
 				33542189192966E700BBEA1B /* 70-tv.png in Resources */,
 				3384BC70192B3D280014D9E0 /* NewsTableViewCell.xib in Resources */,
+				33E0D40D19332D5A00EBE843 /* 111-user.png in Resources */,
 				3378366D19281894007990A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

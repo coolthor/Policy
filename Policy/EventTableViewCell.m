@@ -27,4 +27,10 @@
         [ self .delegate EventTableViewCellDelegateDidClickAddEventButton: self ];
     }
 }
+
+- (IBAction)DeleteEventFromCalendar:(id)sender {
+    if ( self .delegate && [ self .delegate respondsToSelector: @selector (EventTableViewCellDelegateDidClickDelEventButton:)]){
+        [ self .delegate EventTableViewCellDelegateDidClickDelEventButton: self ];
+    }
+}
 @end
