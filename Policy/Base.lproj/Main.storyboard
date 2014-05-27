@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Status-->
+        <!--User View Controller - Status-->
         <scene sceneID="piV-pk-HmO">
             <objects>
-                <viewController id="913-2h-CJz" sceneMemberID="viewController">
+                <viewController id="913-2h-CJz" customClass="UserViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fgJ-6v-xs6"/>
                         <viewControllerLayoutGuide type="bottom" id="xAN-io-tTK"/>
@@ -46,10 +46,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dqy-eH-Skm" customClass="FBProfilePictureView">
+                                <rect key="frame" x="75" y="165" width="160" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTn-hY-2iL">
+                                <rect key="frame" x="75" y="323" width="182" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oEw-on-uaH" customClass="FBLoginView">
+                                <rect key="frame" x="63" y="381" width="194" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Status" image="111-user.png" id="GeX-VI-6dD"/>
+                    <connections>
+                        <outlet property="loginView" destination="oEw-on-uaH" id="pU8-Mn-jad"/>
+                        <outlet property="nameLabel" destination="WTn-hY-2iL" id="C8S-V6-pTJ"/>
+                        <outlet property="profilePictureView" destination="dqy-eH-Skm" id="Qse-Pe-4F5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnd-VW-yqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -131,6 +131,7 @@
     
     [alert show];
 }
+
 -(void)EventTableViewCellDelegateDidClickDelEventButton:(EventTableViewCell *)viewController{
     _selectedCell =viewController;
     UIAlertView  *alert = [[UIAlertView alloc]initWithTitle:@"刪除事件" message:@"確認從行事曆中刪除該事件" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"刪除", nil];
@@ -170,7 +171,6 @@
     NSDateComponents *oneDayAgoComponents = [[NSDateComponents alloc] init];
     oneDayAgoComponents.day = -1;
     
-    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSDate *SDate = [dateFormatter dateFromString:startDate];
@@ -182,10 +182,8 @@
     NSDateComponents *oneDayLeftComponents = [[NSDateComponents alloc] init];
     oneDayLeftComponents.day = 1;
     
-    
     NSDate *EDate;
     if(![endDate isEqualToString:@"未定"]){
-        
         EDate = [dateFormatter dateFromString:endDate];
         EDate = [calendar dateByAddingComponents:oneDayLeftComponents
                                           toDate:EDate
@@ -197,6 +195,11 @@
     }
     
     NSPredicate *predicate = [_eventStore predicateForEventsWithStartDate:oneDayAgo endDate:EDate calendars:nil];
+    [_eventStore requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error){
+        if (!granted) {
+            NSLog(@"沒有取得行事曆權限。");
+        }
+        }];
     NSArray * events = [_eventStore eventsMatchingPredicate:predicate];
 
     for (EKEvent * o in events) {
@@ -264,7 +267,7 @@
 -(void)addEventToCalender{
     
     [_eventStore requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error)
-     {
+    {
          if (granted)
          {
              EKEvent *event  = [EKEvent eventWithEventStore:_eventStore];

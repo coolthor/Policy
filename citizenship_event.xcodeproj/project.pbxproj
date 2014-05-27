@@ -49,6 +49,8 @@
 		33DC19AD192AA93B00E81A3A /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DC19AC192AA93B00E81A3A /* News.m */; };
 		33E0D40D19332D5A00EBE843 /* 111-user.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E0D40C19332D5A00EBE843 /* 111-user.png */; };
 		33E0D40F19335BD200EBE843 /* Editing-Delete-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E0D40E19335BD200EBE843 /* Editing-Delete-icon.png */; };
+		33E0D41119336D7400EBE843 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E0D41019336D7400EBE843 /* FacebookSDK.framework */; };
+		33E0D41419336F9100EBE843 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0D41319336F9100EBE843 /* UserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,21 +85,21 @@
 		3354218319290F2600BBEA1B /* StreamViewDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamViewDetail.h; sourceTree = "<group>"; };
 		3354218419290F2600BBEA1B /* StreamViewDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamViewDetail.m; sourceTree = "<group>"; };
 		33542188192966E700BBEA1B /* 70-tv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "70-tv.png"; sourceTree = "<group>"; };
-		3378365619281894007990A6 /* Policy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Policy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3378365619281894007990A6 /* citizenship_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = citizenship_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3378365919281894007990A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3378365B19281894007990A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3378365D19281894007990A6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		3378366119281894007990A6 /* Policy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Policy-Info.plist"; sourceTree = "<group>"; };
+		3378366119281894007990A6 /* citizenship_event-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "citizenship_event-Info.plist"; sourceTree = "<group>"; };
 		3378366319281894007990A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3378366519281894007990A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3378366719281894007990A6 /* Policy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Policy-Prefix.pch"; sourceTree = "<group>"; };
+		3378366719281894007990A6 /* citizenship_event-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "citizenship_event-Prefix.pch"; sourceTree = "<group>"; };
 		3378366819281894007990A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3378366919281894007990A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3378366C19281894007990A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3378367419281894007990A6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3378367A19281894007990A6 /* PolicyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolicyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3378367A19281894007990A6 /* citizenship_eventTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = citizenship_eventTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3378367B19281894007990A6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		3378368319281894007990A6 /* PolicyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PolicyTests-Info.plist"; sourceTree = "<group>"; };
+		3378368319281894007990A6 /* citizenship_eventTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "citizenship_eventTests-Info.plist"; sourceTree = "<group>"; };
 		3378368519281894007990A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3378368719281894007990A6 /* PolicyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PolicyTests.m; sourceTree = "<group>"; };
 		3384BC6C192B3D280014D9E0 /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsTableViewCell.h; path = ../NewsTableViewCell.h; sourceTree = "<group>"; };
@@ -122,6 +124,9 @@
 		33DC19AC192AA93B00E81A3A /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
 		33E0D40C19332D5A00EBE843 /* 111-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "111-user.png"; path = "../../../Downloads/glyphish-icons/PNG icons/111-user.png"; sourceTree = "<group>"; };
 		33E0D40E19335BD200EBE843 /* Editing-Delete-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Editing-Delete-icon.png"; path = "../../../Downloads/Editing-Delete-icon.png"; sourceTree = "<group>"; };
+		33E0D41019336D7400EBE843 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		33E0D41219336F9100EBE843 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		33E0D41319336F9100EBE843 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33AAEC22192F1A08003558F5 /* EventKit.framework in Frameworks */,
+				33E0D41119336D7400EBE843 /* FacebookSDK.framework in Frameworks */,
 				3378365C19281894007990A6 /* CoreGraphics.framework in Frameworks */,
 				3378365E19281894007990A6 /* UIKit.framework in Frameworks */,
 				3378365A19281894007990A6 /* Foundation.framework in Frameworks */,
@@ -177,8 +183,8 @@
 		3378365719281894007990A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3378365619281894007990A6 /* Policy.app */,
-				3378367A19281894007990A6 /* PolicyTests.xctest */,
+				3378365619281894007990A6 /* citizenship_event.app */,
+				3378367A19281894007990A6 /* citizenship_eventTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,6 +192,7 @@
 		3378365819281894007990A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33E0D41019336D7400EBE843 /* FacebookSDK.framework */,
 				33AAEC21192F1A08003558F5 /* EventKit.framework */,
 				3378365919281894007990A6 /* Foundation.framework */,
 				3378365B19281894007990A6 /* CoreGraphics.framework */,
@@ -198,6 +205,7 @@
 		3378365F19281894007990A6 /* Policy */ = {
 			isa = PBXGroup;
 			children = (
+				33E0D41519336F9800EBE843 /* User */,
 				33AAEC12192EDCE1003558F5 /* NewsPage */,
 				33AAEC11192EDC96003558F5 /* Image */,
 				3354217F1928B41A00BBEA1B /* Object */,
@@ -216,10 +224,10 @@
 		3378366019281894007990A6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3378366119281894007990A6 /* Policy-Info.plist */,
+				3378366119281894007990A6 /* citizenship_event-Info.plist */,
 				3378366219281894007990A6 /* InfoPlist.strings */,
 				3378366519281894007990A6 /* main.m */,
-				3378366719281894007990A6 /* Policy-Prefix.pch */,
+				3378366719281894007990A6 /* citizenship_event-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -236,7 +244,7 @@
 		3378368219281894007990A6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3378368319281894007990A6 /* PolicyTests-Info.plist */,
+				3378368319281894007990A6 /* citizenship_eventTests-Info.plist */,
 				3378368419281894007990A6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -311,12 +319,21 @@
 			name = NewsPage;
 			sourceTree = "<group>";
 		};
+		33E0D41519336F9800EBE843 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				33E0D41219336F9100EBE843 /* UserViewController.h */,
+				33E0D41319336F9100EBE843 /* UserViewController.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3378365519281894007990A6 /* Policy */ = {
+		3378365519281894007990A6 /* citizenship_event */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3378368B19281894007990A6 /* Build configuration list for PBXNativeTarget "Policy" */;
+			buildConfigurationList = 3378368B19281894007990A6 /* Build configuration list for PBXNativeTarget "citizenship_event" */;
 			buildPhases = (
 				3378365219281894007990A6 /* Sources */,
 				3378365319281894007990A6 /* Frameworks */,
@@ -326,14 +343,14 @@
 			);
 			dependencies = (
 			);
-			name = Policy;
+			name = citizenship_event;
 			productName = Policy;
-			productReference = 3378365619281894007990A6 /* Policy.app */;
+			productReference = 3378365619281894007990A6 /* citizenship_event.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3378367919281894007990A6 /* PolicyTests */ = {
+		3378367919281894007990A6 /* citizenship_eventTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3378368E19281894007990A6 /* Build configuration list for PBXNativeTarget "PolicyTests" */;
+			buildConfigurationList = 3378368E19281894007990A6 /* Build configuration list for PBXNativeTarget "citizenship_eventTests" */;
 			buildPhases = (
 				3378367619281894007990A6 /* Sources */,
 				3378367719281894007990A6 /* Frameworks */,
@@ -344,9 +361,9 @@
 			dependencies = (
 				3378368019281894007990A6 /* PBXTargetDependency */,
 			);
-			name = PolicyTests;
+			name = citizenship_eventTests;
 			productName = PolicyTests;
-			productReference = 3378367A19281894007990A6 /* PolicyTests.xctest */;
+			productReference = 3378367A19281894007990A6 /* citizenship_eventTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -358,12 +375,15 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Thor Lin";
 				TargetAttributes = {
+					3378365519281894007990A6 = {
+						DevelopmentTeam = V743EFT54Y;
+					};
 					3378367919281894007990A6 = {
 						TestTargetID = 3378365519281894007990A6;
 					};
 				};
 			};
-			buildConfigurationList = 3378365119281894007990A6 /* Build configuration list for PBXProject "Policy" */;
+			buildConfigurationList = 3378365119281894007990A6 /* Build configuration list for PBXProject "citizenship_event" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -376,8 +396,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3378365519281894007990A6 /* Policy */,
-				3378367919281894007990A6 /* PolicyTests */,
+				3378365519281894007990A6 /* citizenship_event */,
+				3378367919281894007990A6 /* citizenship_eventTests */,
 			);
 		};
 /* End PBXProject section */
@@ -428,6 +448,7 @@
 				334B8DAD192E67B900B53EA9 /* Event.m in Sources */,
 				3324DDA4192BAD1A00BC1C4B /* NewDetailTableViewCell.m in Sources */,
 				33DC19AD192AA93B00E81A3A /* News.m in Sources */,
+				33E0D41419336F9100EBE843 /* UserViewController.m in Sources */,
 				334B8DB1192E6C6300B53EA9 /* EventTableViewCell.m in Sources */,
 				335421821928B44600BBEA1B /* Channel.m in Sources */,
 				3378366A19281894007990A6 /* AppDelegate.m in Sources */,
@@ -454,7 +475,7 @@
 /* Begin PBXTargetDependency section */
 		3378368019281894007990A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3378365519281894007990A6 /* Policy */;
+			target = 3378365519281894007990A6 /* citizenship_event */;
 			targetProxy = 3378367F19281894007990A6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -562,10 +583,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/coolthor01/Documents/FacebookSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Policy/Policy-Prefix.pch";
-				INFOPLIST_FILE = "Policy/Policy-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Policy/citizenship_event-Prefix.pch";
+				INFOPLIST_FILE = "Policy/citizenship_event-Info.plist";
+				PRODUCT_NAME = citizenship_event;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -575,10 +601,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/coolthor01/Documents/FacebookSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Policy/Policy-Prefix.pch";
-				INFOPLIST_FILE = "Policy/Policy-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Policy/citizenship_event-Prefix.pch";
+				INFOPLIST_FILE = "Policy/citizenship_event-Info.plist";
+				PRODUCT_NAME = citizenship_event;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -598,8 +629,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "PolicyTests/PolicyTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "PolicyTests/citizenship_eventTests-Info.plist";
+				PRODUCT_NAME = citizenship_eventTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -616,8 +647,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Policy/Policy-Prefix.pch";
-				INFOPLIST_FILE = "PolicyTests/PolicyTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "PolicyTests/citizenship_eventTests-Info.plist";
+				PRODUCT_NAME = citizenship_eventTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -626,7 +657,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3378365119281894007990A6 /* Build configuration list for PBXProject "Policy" */ = {
+		3378365119281894007990A6 /* Build configuration list for PBXProject "citizenship_event" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3378368919281894007990A6 /* Debug */,
@@ -635,7 +666,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3378368B19281894007990A6 /* Build configuration list for PBXNativeTarget "Policy" */ = {
+		3378368B19281894007990A6 /* Build configuration list for PBXNativeTarget "citizenship_event" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3378368C19281894007990A6 /* Debug */,
@@ -644,7 +675,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3378368E19281894007990A6 /* Build configuration list for PBXNativeTarget "PolicyTests" */ = {
+		3378368E19281894007990A6 /* Build configuration list for PBXNativeTarget "citizenship_eventTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3378368F19281894007990A6 /* Debug */,

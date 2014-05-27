@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3378365519281894007990A6"
                BuildableName = "Policy.app"
-               BlueprintName = "Policy"
-               ReferencedContainer = "container:Policy.xcodeproj">
+               BlueprintName = "citizenship_event"
+               ReferencedContainer = "container:citizenship_event.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3378367919281894007990A6"
                BuildableName = "PolicyTests.xctest"
-               BlueprintName = "PolicyTests"
-               ReferencedContainer = "container:Policy.xcodeproj">
+               BlueprintName = "citizenship_eventTests"
+               ReferencedContainer = "container:citizenship_event.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3378365519281894007990A6"
             BuildableName = "Policy.app"
-            BlueprintName = "Policy"
-            ReferencedContainer = "container:Policy.xcodeproj">
+            BlueprintName = "citizenship_event"
+            ReferencedContainer = "container:citizenship_event.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3378365519281894007990A6"
             BuildableName = "Policy.app"
-            BlueprintName = "Policy"
-            ReferencedContainer = "container:Policy.xcodeproj">
+            BlueprintName = "citizenship_event"
+            ReferencedContainer = "container:citizenship_event.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3378365519281894007990A6"
             BuildableName = "Policy.app"
-            BlueprintName = "Policy"
-            ReferencedContainer = "container:Policy.xcodeproj">
+            BlueprintName = "citizenship_event"
+            ReferencedContainer = "container:citizenship_event.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

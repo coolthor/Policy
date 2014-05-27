@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Policy.xcodeproj">
+      location = "self:citizenship_event.xcodeproj">
    </FileRef>
 </Workspace>
