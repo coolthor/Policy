@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3378365519281894007990A6"
-               BuildableName = "Policy.app"
+               BuildableName = "citizenship_event.app"
                BlueprintName = "citizenship_event"
                ReferencedContainer = "container:citizenship_event.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3378367919281894007990A6"
-               BuildableName = "PolicyTests.xctest"
+               BuildableName = "citizenship_eventTests.xctest"
                BlueprintName = "citizenship_eventTests"
                ReferencedContainer = "container:citizenship_event.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3378365519281894007990A6"
-            BuildableName = "Policy.app"
+            BuildableName = "citizenship_event.app"
             BlueprintName = "citizenship_event"
             ReferencedContainer = "container:citizenship_event.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3378365519281894007990A6"
-            BuildableName = "Policy.app"
+            BuildableName = "citizenship_event.app"
             BlueprintName = "citizenship_event"
             ReferencedContainer = "container:citizenship_event.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3378365519281894007990A6"
-            BuildableName = "Policy.app"
+            BuildableName = "citizenship_event.app"
             BlueprintName = "citizenship_event"
             ReferencedContainer = "container:citizenship_event.xcodeproj">
          </BuildableReference>

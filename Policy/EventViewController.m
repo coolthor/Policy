@@ -101,10 +101,24 @@
     Event * myEvent = _Events[indexPath.row];
     cell.title.text = myEvent.title;
     cell.start.text = [self ParseDatetime:myEvent.start];
-    if(myEvent.start > myEvent.end){
+    
+    //新增 先轉成同樣的format 後再來比大小。
+    NSString * end = [self ParseDatetime:myEvent.end];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+
+    NSDate *SDate = [dateFormatter dateFromString:cell.start.text];
+    NSDate *EDate = [dateFormatter dateFromString:end];
+    
+//    NSLog(@"Title:%@",myEvent.title);
+//    NSLog(@"start:%@",SDate);
+//    NSLog(@"end:%@",EDate);
+    //if(SDate > EDate){
+    if([SDate earlierDate:EDate] != SDate){
         cell.End.text = cell.start.text;
     }else{
-        cell.End.text = [self ParseDatetime:myEvent.end];
+        cell.End.text = end;
     }
     cell.event = myEvent;
     cell.delegate =self;
@@ -214,6 +228,7 @@
 
 
 -(void)delEventFromCalendar{
+    
     NSString * startDate = _selectedCell.start.text;
     NSString * endDate = _selectedCell.End.text;
     NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -251,7 +266,9 @@
     NSError * error;
     for(EKEvent * e in events){
 //        NSLog(@"Remove Event:%@",e);
-        [_eventStore removeEvent:e span:EKSpanFutureEvents error:&error];
+        if([e.title rangeOfString:_selectedCell.title.text].location != NSNotFound){
+            [_eventStore removeEvent:e span:EKSpanFutureEvents error:&error];
+        }
     }
     
     if (!error) {
@@ -279,12 +296,15 @@
              NSDate *EDate;
              if(![_selectedCell.End.text isEqualToString:@"未定"]){
                  EDate = [dateFormatter dateFromString:_selectedCell.End.text];
+                 if(EDate < SDate){
+                     EDate = SDate;
+                 }
              }else{
                  EDate = SDate;
              }
 
              event.location = _selectedCell.event.location;
-             event.title =_selectedCell.title.text;
+             event.title = [NSString stringWithFormat:@"[CITIZEN EVENT]%@",_selectedCell.title.text];
              event.startDate=SDate;
              event.endDate=EDate;
              event.notes = _selectedCell.title.text;
